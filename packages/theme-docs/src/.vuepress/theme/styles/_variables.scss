@@ -1,0 +1,26 @@
+@import "~@foxone/uikit/src/styles/variables/_index.scss";
+
+$body-font-family: "Inter", Roboto, Oxygen, "Helvetica Neue", "PingFang SC",
+  sans-serif;
+$font-size-root: 14px;
+$line-height-root: 1.2;
+$font-weights: () !default;
+$font-weights: map-deep-merge(
+  (
+    "thin": 100,
+    "light": 300,
+    "regular": 400,
+    "medium": 500,
+    "semibold": 600,
+    "bold": 700,
+    "black": 900
+  ),
+  $font-weights
+);
+
+// code
+$code-block-color: var(--v-greyscale_6-base);
+$code-block-highlight-color: var(--v-greyscale_5-base);
+$code-line-number-width: 3.5em;
+$code-lang: js ts html md vue css sass scss less stylus go java c sh yaml py
+  docker dockerfile makefile;

@@ -1,0 +1,48 @@
+.f-docs-sidebar {
+  min-width: 220px;
+  max-width: 220px;
+  padding-left: 16px;
+  border-right: 1px solid var(--v-greyscale_6-base);
+
+  &__content {
+    position: sticky;
+    top: 0;
+  }
+
+  &__heading {
+    margin: 0 !important;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 12px 0;
+  }
+
+  &__subheaders {
+    list-style: none;
+    // padding-left: 1rem;
+    margin: 0;
+    font-size: 0.95em;
+  }
+
+  // &__group {
+  //   .f-docs-sidebar__link {
+  //     padding-left: 1rem;
+  //   }
+  // }
+}
+
+.f-docs-sidebar .f-docs-sidebar__link {
+  font-size: 1em;
+  padding: 8px 16px 8px 0;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  color: var(--v-greyscale_3-base) !important;
+}
+
+.f-docs-sidebar__link.f-docs-sidebar__link--active {
+  color: var(--v-primary-base) !important;
+  border-right: 2px solid var(--v-primary-base);
+  font-weight: 600;
+}

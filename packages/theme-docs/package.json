@@ -1,0 +1,31 @@
+{
+  "name": "@foxone/vuepress-theme-docs",
+  "version": "1.0.0",
+  "description": "Vuepress docs theme for foxone",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev src",
+    "docs:build": "vuepress build src"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.5.4",
+    "vuepress": "^1.8.2",
+    "vuepress-plugin-typescript": "^0.3.1",
+    "vuepress-types": "^0.9.4",
+    "vuetify-loader": "1.7.2"
+  },
+  "dependencies": {
+    "@foxone/icons": "beta",
+    "@foxone/uikit": "beta",
+    "markdown-it-checkbox": "^1.1.0",
+    "node-sass": "^4.14.1",
+    "qrcode": "^1.5.0",
+    "sass": "1.32.13",
+    "sass-loader": "10.1.0",
+    "vue": "2.6.14",
+    "vue-class-component": "^7.2.6",
+    "vue-property-decorator": "^9.1.2"
+  }
+}
