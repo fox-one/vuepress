@@ -1,6 +1,7 @@
 import Vuetify from "vuetify/lib";
 import UIKit from "@foxone/uikit";
 import { mergeDeep } from "vuetify/lib/util/helpers";
+import locales from "./locales.json";
 
 import "@foxone/uikit/build/index.min.css";
 import "@theme/styles/index.scss";
@@ -16,6 +17,7 @@ export default ({
 
   const vuetifyOptions = siteData.themeConfig.vuetifyOptions || {};
   const preset = mergeDeep(UIKit.preset, {
+    lang: { locales },
     theme: {
       themes: {
         light: {

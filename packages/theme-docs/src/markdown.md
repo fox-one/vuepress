@@ -369,7 +369,7 @@ It also supports [line highlighting](#line-highlighting-in-code-blocks):
 **Input**
 
 ```md
-<<< @/../@vuepress/markdown/**tests**/fragments/snippet.js{2}
+
 ```
 
 **Output**

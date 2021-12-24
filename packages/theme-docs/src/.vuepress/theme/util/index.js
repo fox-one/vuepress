@@ -246,3 +246,7 @@ function resolveItem(item, pages, base, groupDepth = 1) {
     };
   }
 }
+
+export const t = (vm, key) => {
+  return vm.$vuetify.lang.t("$vuetify.vuepress." + key);
+};

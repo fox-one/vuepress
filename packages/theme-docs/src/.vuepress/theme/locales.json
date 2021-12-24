@@ -1,0 +1,18 @@
+{
+  "en": {
+    "vuepress": {
+      "last_updated": "Last Updated",
+      "edit_page": "Edit This Page",
+      "next_page": "Next",
+      "prev_page": "Prev"
+    }
+  },
+  "zh": {
+    "vuepress": {
+      "last_updated": "上次更新",
+      "edit_page": "编辑页面",
+      "next_page": "上一页",
+      "prev_page": "下一页"
+    }
+  }
+}
