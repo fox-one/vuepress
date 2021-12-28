@@ -1,0 +1,43 @@
+.appbar-title {
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+
+  .appbar-name {
+    margin-left: 8px;
+  }
+}
+
+.appbar-links {
+  display: flex;
+}
+
+.appbar-link {
+  font-size: 14px;
+  padding: 8px 16px;
+  color: currentColor;
+  cursor: pointer;
+  color: currentColor;
+  display: inline-block;
+  border-radius: 8px;
+
+  &:hover {
+    opacity: 0.8;
+    background-color: var(--v-greyscale_6-base);
+  }
+}
+
+.appbar-menu__items {
+  .appbar-menu__item-title {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 0;
+  }
+
+  .appbar-link {
+    display: block;
+    font-size: 13px;
+    padding: 16px;
+  }
+}

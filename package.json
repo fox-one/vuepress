@@ -9,7 +9,9 @@
     "packages/*"
   ],
   "resolutions": {
-    "typescript": "^4.2.4"
+    "typescript": "4.2.4",
+    "pretty-error": "2.1.1",
+    "renderkid": "2.0.3"
   },
   "scripts": {
     "build": "foxone-dev-build-ts",
