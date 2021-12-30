@@ -4,7 +4,7 @@
 
     <v-main>
       <v-container class="f-docs-container pa-0">
-        <side-bar :items="sideBarItems" />
+        <side-bar v-if="showSideBar" :items="sideBarItems" />
 
         <page-content :sidebar-items="sideBarItems">
           <Content class="f-docs-content" />

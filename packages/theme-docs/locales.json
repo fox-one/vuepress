@@ -4,7 +4,8 @@
       "last_updated": "Last Updated",
       "edit_page": "Edit This Page",
       "next_page": "Next",
-      "prev_page": "Prev"
+      "prev_page": "Prev",
+      "miss_file": "Miss File"
     }
   },
   "zh": {
@@ -12,7 +13,8 @@
       "last_updated": "上次更新",
       "edit_page": "编辑页面",
       "next_page": "上一页",
-      "prev_page": "下一页"
+      "prev_page": "下一页",
+      "miss_file": "未找到文件"
     }
   }
 }

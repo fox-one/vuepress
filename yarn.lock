@@ -1641,6 +1641,7 @@ __metadata:
   dependencies:
     "@foxone/icons": beta
     "@foxone/uikit": beta
+    "@mdi/js": ^6.5.95
     markdown-it-checkbox: ^1.1.0
     node-sass: ^4.14.1
     qrcode: ^1.5.0
@@ -1897,6 +1898,13 @@ __metadata:
     "@types/yargs": ^15.0.0
     chalk: ^4.0.0
   checksum: 5c511d7807f414b298299ae4a053abf265f39984942e0eefdfb17a7986a36f1047e0fd9a6f785bdddbf7343a5737595dfabe148719a80e118dd77486502009cc
+  languageName: node
+  linkType: hard
+
+"@mdi/js@npm:^6.5.95":
+  version: 6.5.95
+  resolution: "@mdi/js@npm:6.5.95"
+  checksum: 16846f8ec49b43621a94a515a714b8ee4359e00aaf7371c1d73c983e3639693120c1228e7a1d05584e8bdfb0156ebbfeedadd7936041da5757ca436f434f0664
   languageName: node
   linkType: hard
 
@@ -6280,6 +6288,15 @@ __metadata:
   checksum: 62d4b87b09421f813dd03eb17866cb307e278555475b25752396d3e5c7e63b9f0f64ab5b41edeb755cb52d722600a89977d36c64a94d02ed92c32e44a8b849f2
   languageName: node
   linkType: hard
+
+"docs-uikit@workspace:packages/docs-uikit":
+  version: 0.0.0-use.local
+  resolution: "docs-uikit@workspace:packages/docs-uikit"
+  dependencies:
+    "@foxone/vuepress-theme-docs": "workspace:packages/theme-docs"
+    vuepress: ^1.9.5
+  languageName: unknown
+  linkType: soft
 
 "docsearch.js@npm:^2.5.2":
   version: 2.6.3
@@ -16924,7 +16941,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"vuepress@npm:^1.8.2":
+"vuepress@npm:^1.8.2, vuepress@npm:^1.9.5":
   version: 1.9.5
   resolution: "vuepress@npm:1.9.5"
   dependencies:

@@ -1,17 +1,17 @@
 <template>
   <v-sheet class="" outlined rounded>
-    <v-lazy min-height="52" @mouseenter="handleImportTemplate">
+    <v-lazy min-height="42" @mouseenter="handleImportTemplate">
       <div class="text-end pa-2">
         <v-btn
           v-for="(action, i) in actions"
-          icon
           :key="i"
+          icon
+          small
           :disabled="hasError"
           :aria-label="action.path"
           @click="action.onClick"
         >
-          TODO
-          <v-icon v-text="action.icon" />
+          <v-icon :size="16" v-text="action.icon" />
         </v-btn>
       </div>
     </v-lazy>
@@ -28,6 +28,7 @@
                   <v-btn
                     :input-value="active"
                     text
+                    small
                     class="mr-2"
                     @click="toggle"
                   >
@@ -40,7 +41,7 @@
 
           <v-divider />
 
-          <v-window v-model="selected" class="grey lighten-5">
+          <v-window v-model="selected" class="greyscale_6">
             <template v-for="(section, i) in sections">
               <v-window-item :key="`window-${i}`" :value="section">
                 <markup :code="pen[section]" :rounded="false" />
@@ -63,6 +64,7 @@
 
 <script lang="ts">
 import { Component, Vue, Prop } from "vue-property-decorator";
+import { mdiCodeBraces } from "@mdi/js";
 
 @Component({
   name: "Example"
@@ -89,7 +91,7 @@ class Example extends Vue {
   get actions() {
     return [
       {
-        icon: "",
+        icon: mdiCodeBraces,
         path: "view-source",
         onClick: () => (this.expand = !this.expand)
       }

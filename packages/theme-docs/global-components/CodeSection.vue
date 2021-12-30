@@ -1,15 +1,15 @@
 <template>
   <v-sheet
-    :color="isDark ? '#1F1F1F' : 'grey lighten-5'"
     :dark="isDark"
     :rounded="rounded"
+    color="greyscale_6"
     class="overflow-hidden"
     dir="ltr"
     outlined
   >
     <slot />
 
-    <app-copy-btn :target="target" class="mr-n2 mt-n2" />
+    <copy-btn :target="target" class="mr-n2 mt-n2" />
   </v-sheet>
 </template>
 
@@ -24,6 +24,10 @@ class CodeSection extends Vue {
 
   get isDark() {
     return this.$vuetify.theme.dark;
+  }
+
+  target() {
+    return this.$el.querySelector("pre");
   }
 }
 export default CodeSection;

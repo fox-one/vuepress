@@ -5,6 +5,6 @@
     "paths": {},
     "skipLibCheck": true,
     "typeRoots": ["./node_modules/@types"],
-    "types": ["vuepress-types", "vuetify", "vuex"]
+    "types": ["vuepress-types", "vuetify", "vuex", "@foxone/uikit"]
   }
 }

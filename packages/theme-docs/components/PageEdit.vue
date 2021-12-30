@@ -59,25 +59,30 @@ class PageEdit extends Vue {
     const particial = `/${docsBranch}/` + dir + path;
 
     const bitbucket = /bitbucket.org/;
+
     if (bitbucket.test(docsRepo)) {
       const base = docsRepo;
+
       return (
         base.replace(endingSlashRE, "") +
-        `/src` +
+        "/src" +
         particial +
         `?mode=edit&spa=0&at=${docsBranch}&fileviewer=file-view-default`
       );
     }
 
     const gitlab = /gitlab.com/;
+
     if (gitlab.test(docsRepo)) {
       const base = docsRepo;
-      return base.replace(endingSlashRE, "") + `/-/edit` + particial;
+
+      return base.replace(endingSlashRE, "") + "/-/edit" + particial;
     }
 
     const base = outboundRE.test(docsRepo)
       ? docsRepo
       : `https://github.com/${docsRepo}`;
+
     return base.replace(endingSlashRE, "") + "/edit" + particial;
   }
 }
