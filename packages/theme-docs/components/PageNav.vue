@@ -28,9 +28,9 @@ const links = {
 
 function resolvePageLink(
   linkType,
-  { $themeConfig, $page, $route, $site, sidebarItems }
+  { $page, $route, $site, $themeConfig, sidebarItems }
 ) {
-  const { resolve, getThemeLinkConfig, getPageLinkConfig } = linkType;
+  const { getPageLinkConfig, getThemeLinkConfig, resolve } = linkType;
 
   // Get link config from theme
   const themeLinkConfig = getThemeLinkConfig($themeConfig);
@@ -60,11 +60,11 @@ class PageNav extends Vue {
   @Prop() sidebarItems;
 
   get prev() {
-    return resolvePageLink(links.next, this);
+    return resolvePageLink(links.prev, this);
   }
 
   get next() {
-    return resolvePageLink(links.prev, this);
+    return resolvePageLink(links.next, this);
   }
 }
 
@@ -91,6 +91,7 @@ function flatten(items, res) {
     }
   }
 }
+
 export default PageNav;
 </script>
 

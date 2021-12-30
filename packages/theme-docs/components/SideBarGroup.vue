@@ -49,8 +49,8 @@ class SideBarGroup extends Vue {
 
   // ref: https://vuejs.org/v2/guide/components-edge-cases.html#Circular-References-Between-Components
   beforeCreate() {
-    // @ts-ignore
-    this.$options.components.SideBarLinks =
+    (this.$options.components as any).SideBarLinks =
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
       require("@theme/components/SideBarLinks.vue").default;
   }
 

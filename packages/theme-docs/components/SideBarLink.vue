@@ -8,7 +8,7 @@ export default Vue.extend({
   render(
     h,
     {
-      parent: { $page, $site, $route, $themeConfig, $themeLocaleConfig },
+      parent: { $page, $route, $site, $themeConfig, $themeLocaleConfig },
       props: { item, sidebarDepth }
     }
   ) {
@@ -48,6 +48,7 @@ export default Vue.extend({
       !hashRE.test(item.path)
     ) {
       const children = groupHeaders(item.headers);
+
       return [link, renderChildren(h, children, item.path, $route, maxDepth)];
     } else {
       return link;

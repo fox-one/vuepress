@@ -41,7 +41,7 @@ class AppBarLinks extends Vue {
 
     if (locales && Object.keys(locales).length > 1) {
       const currentLink = this.$page.path;
-      const routes = this.$router.options.routes!;
+      const routes = this.$router.options.routes || [];
       const themeLocales = this.$site.themeConfig.locales || {};
 
       const languageDropdown = {
@@ -53,6 +53,7 @@ class AppBarLinks extends Vue {
             (themeLocales[path] && themeLocales[path].label) || locale.lang;
 
           let link;
+
           // Stay on the current page
           if (locale.lang === this.$lang) {
             link = currentLink;
@@ -60,10 +61,12 @@ class AppBarLinks extends Vue {
             // Try to stay on the same page
             link = currentLink.replace(this.$localeConfig.path || "", path);
             // fallback to homepage
+
             if (!routes.some((route) => route.path === link)) {
               link = path;
             }
           }
+
           return { text, link };
         })
       };
@@ -93,7 +96,8 @@ class AppBarLinks extends Vue {
   }
 
   get repoLabel() {
-    if (!this.repoLink) return;
+    if (!this.repoLink) return "";
+
     if (this.$site.themeConfig.repoLabel) {
       return this.$site.themeConfig.repoLabel;
     }
@@ -103,6 +107,7 @@ class AppBarLinks extends Vue {
 
     for (let i = 0; i < platforms.length; i++) {
       const platform = platforms[i];
+
       if (new RegExp(platform, "i").test(repoHost)) {
         return platform;
       }

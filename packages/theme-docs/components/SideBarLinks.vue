@@ -3,18 +3,18 @@
     <template v-for="(item, index) in items">
       <side-bar-group
         v-if="item.type && item.type === 'group'"
+        :key="index"
         :item="item"
         :depth="depth"
         :open="index === openGroupIndex"
         :collapsable="item.collapsable"
-        :key="index"
         @toggle="handleToggleGroup(index)"
       />
       <side-bar-link
         v-else
+        :key="index"
         :item="item"
         :sidebar-depth="sidebarDepth"
-        :key="index"
       />
     </template>
   </div>
@@ -92,5 +92,6 @@ function isDescendantActive(route, item) {
 
   return isChildActive || isGrandChildActive;
 }
+
 export default SideBarLinks;
 </script>

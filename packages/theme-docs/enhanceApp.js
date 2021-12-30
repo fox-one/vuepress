@@ -49,9 +49,10 @@ export default ({
 
   Vue.use(Vuetify);
   Vue.use(UIKit);
-  Vue.use(UIKit.Toast, vuetify, { top: false,centered: true });
+  Vue.use(UIKit.Toast, vuetify, { top: false, centered: true });
   Vue.use(UIKit.Dialog, vuetify, { flat: true });
   Vue.use(Vuex);
+  Vue.mixin({ store });
 
   for (const [name, component] of Object.entries(pageComponents)) {
     Vue.component(name, component);

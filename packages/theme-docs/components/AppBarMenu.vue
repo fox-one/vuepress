@@ -1,7 +1,7 @@
 <template>
   <v-menu v-model="menu">
     <template #activator="{ on }">
-      <span text :aria-label="ariaLabel" v-on="on" class="appbar-link">
+      <span text :aria-label="ariaLabel" class="appbar-link" v-on="on">
         {{ item.text }}
       </span>
     </template>
@@ -15,8 +15,8 @@
           <div class="appbar-menu__items">
             <div
               v-for="child in sub.items"
-              class="appbar-menu__item"
               :key="child.link"
+              class="appbar-menu__item"
             >
               <app-bar-link :item="child" />
             </div>
