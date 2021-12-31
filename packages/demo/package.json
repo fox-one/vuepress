@@ -1,10 +1,10 @@
 {
-  "name": "demo",
+  "name": "@foxone/vuepress-theme-docs-demo",
   "version": "1.0.0",
   "description": "Documentation for @foxone/uikit",
   "scripts": {
     "dev": "vuepress dev .",
-    "build": "vuepres build ."
+    "build": "vuepress build ."
   },
   "author": "Fox.ONE",
   "license": "ISC",

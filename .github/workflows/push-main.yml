@@ -8,15 +8,22 @@ jobs:
   master:
     strategy:
       matrix:
-        step: ['build:release']
+        step: ["build:release"]
     name: ${{ matrix.step }}
-    if: "! startsWith(github.event.head_commit.message, '[CI Skip]') && github.repository == 'fox-one/fe-lib-template'"
+    if: "! startsWith(github.event.head_commit.message, '[CI Skip]') && github.repository == 'fox-one/vuepress'"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
           token: ${{ secrets.GH_PAT }}
-      
+
+      - uses: actions/cache@v2
+        with:
+          path: |
+            node_modules
+            **/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('./yarn.lock') }}
+
       - name: ${{ matrix.step }}
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
@@ -25,10 +32,36 @@ jobs:
         run: |
           yarn install --immutable | grep -v 'YN0013'
           yarn ${{ matrix.step }}
-          
+
+  docs:
+    needs: [master]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GH_PAT }}
+
+      - uses: actions/cache@v2
+        with:
+          path: |
+            node_modules
+            **/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('./yarn.lock') }}
+
+      - name: Build docs
+        run: |
+          cd packages/demo && yarn build
+
+      - name: Deploy with gh-pages
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          npx gh-pages --dist packages/demo/.vuepress/dist --dest . -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   dummy:
     runs-on: ubuntu-latest
     steps:
-    - name: dummy
-      run: |
-        echo "Dummy skip step"
+      - name: dummy
+        run: |
+          echo "Dummy skip step"
