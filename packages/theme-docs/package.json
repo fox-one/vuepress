@@ -1,6 +1,6 @@
 {
   "name": "@foxone/vuepress-theme-docs",
-  "version": "1.0.0",
+  "version": "0.0.2-0",
   "description": "Vuepress docs theme for foxone",
   "main": "index.js",
   "author": "Fox.ONE",
