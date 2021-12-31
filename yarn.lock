@@ -1492,9 +1492,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@foxone/dev@npm:^0.2.17":
-  version: 0.2.19
-  resolution: "@foxone/dev@npm:0.2.19"
+"@foxone/dev@npm:^0.2.20":
+  version: 0.2.20
+  resolution: "@foxone/dev@npm:0.2.20"
   dependencies:
     "@babel/cli": ^7.13.16
     "@babel/core": ^7.13.16
@@ -1581,7 +1581,7 @@ __metadata:
     foxone-exec-prettier: scripts/foxone-exec-prettier
     foxone-exec-tsc: scripts/foxone-exec-tsc.cjs
     foxone-exec-webpack: scripts/foxone-exec-webpack.cjs
-  checksum: 8009c3693f194d5944133a5386274f974e9ee9f58decfc19064296ee9d7e5833a8a69f84e801c66e5aa5df5b2414c6085c3fabfe116be0948d89e0424350abe5
+  checksum: 932e1accb21530113534f642ab6060393c9efccb2e4dbb0b37317a17ee641b0344abe3ff2323d47995d8587b3756d7c4bf8ad2e648421f43c08d45b1c329fb31
   languageName: node
   linkType: hard
 
@@ -7946,7 +7946,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "foxone-vuepress@workspace:."
   dependencies:
-    "@foxone/dev": ^0.2.17
+    "@foxone/dev": ^0.2.20
   languageName: unknown
   linkType: soft
 
