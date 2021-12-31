@@ -44,3 +44,11 @@ class AppBar extends Vue {
 }
 export default AppBar;
 </script>
+
+<style lang="scss" scoped>
+.theme--dark .v-app-bar {
+  box-shadow: 0px 2px 4px -1px rgb(255 255 255 / 0%),
+    0px 4px 5px 0px rgb(255 255 255 / 0%),
+    0px 1px 10px 0px rgb(255 255 255 / 12%) !important;
+}
+</style>

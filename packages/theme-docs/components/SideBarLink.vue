@@ -56,20 +56,23 @@ export default Vue.extend({
   }
 });
 
-function renderLink(h, to, text, active, level = 1) {
+function renderLink(h, to, text, active, level = 0) {
   const padding = Math.max(0, level - 1);
 
-  const data = {
+  const data: any = {
     props: { to, activeClass: "", exactActiveClass: "" },
     class: {
       "f-docs-sidebar__link": true,
       "f-docs-sidebar__link--active": active,
       [`f-docs-sidebar__link__level-${level}`]: true
-    },
-    style: {
-      "padding-left": padding + "rem"
     }
   };
+
+  if (level > 2) {
+    data.style = {
+      "padding-left": padding + "rem"
+    };
+  }
 
   return h("RouterLink", data, text);
 }
@@ -89,7 +92,7 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1) {
           path + "#" + child.slug,
           child.title,
           active,
-          child.level
+          child.level - 1
         ),
         renderChildren(h, h.children, path, route, maxDepth, depth + 1)
       ]);

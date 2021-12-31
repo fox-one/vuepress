@@ -1,0 +1,15 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "Documentation for @foxone/uikit",
+  "scripts": {
+    "dev": "vuepress dev .",
+    "build": "vuepres build ."
+  },
+  "author": "Fox.ONE",
+  "license": "ISC",
+  "dependencies": {
+    "@foxone/vuepress-theme-docs": "workspace:packages/theme-docs",
+    "vuepress": "^1.9.5"
+  }
+}

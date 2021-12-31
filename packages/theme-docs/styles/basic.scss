@@ -25,7 +25,8 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0.8em 0;
+  margin: 1.2em 0 0.8em 0;
+  text-transform: capitalize;
 
   &:hover .header-anchor {
     opacity: 1;
@@ -54,7 +55,7 @@ h6 {
 }
 
 a.header-anchor {
-  font-size: 0.9em;
+  font-size: 1em;
   float: left;
   margin-left: -0.87em;
   padding-right: 0.23em;
