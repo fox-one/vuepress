@@ -1,6 +1,6 @@
 {
   "name": "@foxone/vuepress-theme-docs-demo",
-  "version": "0.0.2-1",
+  "version": "0.0.2-2",
   "description": "Documentation for @foxone/uikit",
   "scripts": {
     "dev": "vuepress dev .",
@@ -9,7 +9,7 @@
   "author": "Fox.ONE",
   "license": "ISC",
   "dependencies": {
-    "@foxone/vuepress-theme-docs": "0.0.2-1",
+    "@foxone/vuepress-theme-docs": "0.0.2-2",
     "vuepress": "^1.9.5"
   }
 }
