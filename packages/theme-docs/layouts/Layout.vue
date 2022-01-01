@@ -1,10 +1,14 @@
 <template>
   <v-app>
-    <app-bar />
+    <ClientOnly>
+      <app-bar />
+    </ClientOnly>
 
     <v-main>
       <v-container class="f-docs-container pa-0">
-        <side-bar v-if="showSideBar" :items="sideBarItems" />
+        <ClientOnly>
+          <side-bar v-if="showSideBar" :items="sideBarItems" />
+        </ClientOnly>
 
         <page-content :sidebar-items="sideBarItems">
           <Content class="f-docs-content" />
