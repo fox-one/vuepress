@@ -14,7 +14,7 @@
     "renderkid": "2.0.3"
   },
   "scripts": {
-    "build": "foxone-dev-build-ts",
+    "build": "",
     "build:release": "foxone-ci-ghact-build",
     "lint": "foxone-dev-run-lint",
     "test": "foxone-dev-run-test --coverage --passWithNoTests"

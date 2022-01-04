@@ -3,7 +3,7 @@ const { path, fs } = require("@vuepress/shared-utils");
 module.exports = (ctx) => {
   return {
     title: "Fox.ONE UIKit",
-    // base: "/vuepress-theme-docs/",
+    base: "/vuepress-theme-docs/",
     description:
       "Fox.ONE UIKit is a lib base on Vuetify, which contains customized styles for Fox.ONE Apps.",
     theme: "@foxone/vuepress-theme-docs",
