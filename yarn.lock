@@ -1653,7 +1653,6 @@ __metadata:
     "@mdi/js": ^6.5.95
     markdown-it-checkbox: ^1.1.0
     node-sass: ^4.14.1
-    qrcode: ^1.5.0
     raw-loader: 4.0.1
     sass: 1.32.13
     sass-loader: 10.1.0
@@ -13759,7 +13758,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"qrcode@npm:^1.4.4, qrcode@npm:^1.5.0":
+"qrcode@npm:^1.4.4":
   version: 1.5.0
   resolution: "qrcode@npm:1.5.0"
   dependencies:

@@ -5,26 +5,24 @@
   "main": "index.js",
   "author": "Fox.ONE",
   "license": "ISC",
-  "devDependencies": {
-    "@mdi/js": "^6.5.95",
-    "typescript": "4.2.4",
-    "vuepress": "^1.8.2",
-    "vuepress-types": "^0.9.4",
-    "vuetify-loader": "1.7.2"
-  },
   "dependencies": {
     "@foxone/icons": "beta",
     "@foxone/uikit": "beta",
+    "@mdi/js": "^6.5.95",
     "markdown-it-checkbox": "^1.1.0",
     "node-sass": "^4.14.1",
     "raw-loader": "4.0.1",
     "sass": "1.32.13",
     "sass-loader": "10.1.0",
+    "typescript": "4.2.4",
     "vue": "2.6.14",
     "vue-class-component": "^7.2.6",
     "vue-prism-component": "1.2.0",
     "vue-property-decorator": "^9.1.2",
+    "vuepress": "^1.8.2",
     "vuepress-plugin-typescript": "^0.3.1",
+    "vuepress-types": "^0.9.4",
+    "vuetify-loader": "1.7.2",
     "vuex": "^3.6.2"
   }
 }
