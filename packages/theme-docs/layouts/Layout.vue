@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <ClientOnly>
-      <app-bar />
+      <app-bar :items="sideBarItems" />
     </ClientOnly>
 
     <v-main>

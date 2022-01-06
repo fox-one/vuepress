@@ -7,15 +7,17 @@
       width="32"
       max-width="32"
     />
-    <span v-if="title" class="appbar-name">{{ title }}</span>
+    <span v-if="!hideText && title" class="appbar-name">{{ title }}</span>
   </RouterLink>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Prop } from "vue-property-decorator";
 
 @Component
 class SiteTitle extends Vue {
+  @Prop({ type: Boolean, default: false }) hideText!: boolean;
+
   get logo() {
     return this.$site.themeConfig.logo;
   }

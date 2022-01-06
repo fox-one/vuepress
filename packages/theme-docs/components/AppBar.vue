@@ -1,6 +1,6 @@
 <template>
   <v-app-bar app clipped-left>
-    <v-app-bar-nav-icon v-if="mdAndDown" @click="handleToggleSideBar" />
+    <v-app-bar-nav-icon v-if="showToggle" @click="handleToggleSideBar" />
 
     <site-title />
 
@@ -9,13 +9,13 @@
     <app-bar-links v-if="!mdAndDown" />
 
     <v-btn icon small class="mr-0" @click="handleToggleTheme">
-      <v-icon> $mdiBrightness4 </v-icon>
+      <v-icon> {{ themeIcon }} </v-icon>
     </v-btn>
   </v-app-bar>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Prop } from "vue-property-decorator";
 import AppBarLinks from "@theme/components/AppBarLinks.vue";
 import SiteTitle from "@theme/components/SiteTitle.vue";
 
@@ -26,8 +26,18 @@ import SiteTitle from "@theme/components/SiteTitle.vue";
   }
 })
 class AppBar extends Vue {
+  @Prop() items;
+
   get mdAndDown() {
     return this.$vuetify.breakpoint.mdAndDown;
+  }
+
+  get themeIcon() {
+    return this.$vuetify.theme.dark ? "$FIconSun" : "$FIconMoon";
+  }
+
+  get showToggle() {
+    return this.mdAndDown && this.items.length > 0;
   }
 
   handleToggleSideBar() {

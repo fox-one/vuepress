@@ -41,3 +41,14 @@
     padding: 16px;
   }
 }
+
+.appbar-menu__list {
+  max-height: 60vh;
+  overflow: auto;
+}
+
+.f-docs-sidebar__head {
+  .appbar-link {
+    padding: 8px 0;
+  }
+}

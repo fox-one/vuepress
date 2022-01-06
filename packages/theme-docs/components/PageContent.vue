@@ -31,6 +31,7 @@ export default PageContent;
   padding-left: 24px;
   padding-right: 24px;
   flex: 1;
+  overflow: hidden;
 }
 
 @media (min-width: 960px) {

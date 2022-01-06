@@ -1,5 +1,11 @@
 <template>
-  <v-footer app absolute color="greyscale_6" class="pa-4 app-footer">
+  <v-footer
+    app
+    absolute
+    color="greyscale_6"
+    class="pa-4 app-footer"
+    :class="classes"
+  >
     <v-flex>
       <div class="app-footer-links">
         <div class="app-footer-links__group">
@@ -42,7 +48,7 @@
       </div>
 
       <v-row justify="center" no-gutters>
-        <v-col class="py-4 text-center" cols="12">
+        <v-col class="py-6 text-center caption" cols="12">
           Copyright © 2020 - {{ new Date().getFullYear() }}
           <strong>@Fox.ONE</strong>
         </v-col>
@@ -56,6 +62,10 @@ import { Component, Vue } from "vue-property-decorator";
 
 @Component
 class AppFooter extends Vue {
+  get classes() {
+    return { "app-footer--desktop": !this.$vuetify.breakpoint.mdAndDown };
+  }
+
   get links() {
     return [
       { title: "Discord", href: "https://discord.com/invite/ek45g3Cymd" },
@@ -86,6 +96,10 @@ export default AppFooter;
 
 <style lang="scss" scoped>
 .app-footer {
+  padding: 16px;
+}
+
+.app-footer--desktop {
   padding: 16px;
   z-index: 11;
 }
