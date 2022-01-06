@@ -10,6 +10,7 @@
     "@foxone/uikit": "^3.0.0"
   },
   "dependencies": {
+    "entities": "1.1.2",
     "markdown-it-checkbox": "^1.1.0",
     "node-sass": "^4.14.1",
     "raw-loader": "4.0.1",
@@ -24,7 +25,8 @@
     "vuepress-plugin-typescript": "^0.3.1",
     "vuepress-types": "^0.9.4",
     "vuetify-loader": "1.7.2",
-    "vuex": "^3.6.2"
+    "vuex": "^3.6.2",
+    "webpack": "^4.0.0"
   },
   "devDependencies": {
     "@foxone/icons": "beta",

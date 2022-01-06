@@ -64,7 +64,6 @@
 
 <script lang="ts">
 import { Component, Vue, Prop } from "vue-property-decorator";
-import { mdiCodeBraces } from "@mdi/js";
 
 @Component({
   name: "Example"
@@ -91,7 +90,7 @@ class Example extends Vue {
   get actions() {
     return [
       {
-        icon: mdiCodeBraces,
+        icon: "$FIconMaxBold",
         path: "view-source",
         onClick: () => (this.expand = !this.expand)
       }

@@ -1650,6 +1650,7 @@ __metadata:
   dependencies:
     "@foxone/icons": beta
     "@foxone/uikit": beta
+    entities: 1.1.2
     markdown-it-checkbox: ^1.1.0
     node-sass: ^4.14.1
     raw-loader: 4.0.1
@@ -1665,6 +1666,7 @@ __metadata:
     vuepress-types: ^0.9.4
     vuetify-loader: 1.7.2
     vuex: ^3.6.2
+    webpack: ^4.0.0
   peerDependencies:
     "@foxone/icons": ^3.0.0
     "@foxone/uikit": ^3.0.0
@@ -6593,7 +6595,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"entities@npm:^1.1.1, entities@npm:~1.1.1":
+"entities@npm:1.1.2, entities@npm:^1.1.1, entities@npm:~1.1.1":
   version: 1.1.2
   resolution: "entities@npm:1.1.2"
   checksum: 3a4259db358c612853e616915d398e692a3c5dbaa4da44b9a6fce15ab88615cadc9790af608c3bee152972ece69ae61a22f4a13272fd943db2ceaee02ce5cc87
@@ -7941,6 +7943,7 @@ __metadata:
   resolution: "foxone-vuepress@workspace:."
   dependencies:
     "@foxone/dev": ^0.2.20
+    vuetify: ^2.6.2
   languageName: unknown
   linkType: soft
 
@@ -16976,6 +16979,15 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"vuetify@npm:^2.6.2":
+  version: 2.6.2
+  resolution: "vuetify@npm:2.6.2"
+  peerDependencies:
+    vue: ^2.6.4
+  checksum: 2d2e64a4fd8cb2757edb1fad7f5dda4ed3f20e7e70e6702a893d2b41e6f60c5d5670f3d50e958a73bc5c4ca390943f77f5c438313bc16eddde748130e0e474fa
+  languageName: node
+  linkType: hard
+
 "vuex@npm:^3.4.0, vuex@npm:^3.6.2":
   version: 3.6.2
   resolution: "vuex@npm:3.6.2"
@@ -17196,7 +17208,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"webpack@npm:^4.8.1":
+"webpack@npm:^4.0.0, webpack@npm:^4.8.1":
   version: 4.46.0
   resolution: "webpack@npm:4.46.0"
   dependencies:

@@ -20,6 +20,7 @@
     "test": "foxone-dev-run-test --coverage --passWithNoTests"
   },
   "dependencies": {
-    "@foxone/dev": "^0.2.20"
+    "@foxone/dev": "^0.2.20",
+    "vuetify": "^2.6.2"
   }
 }
