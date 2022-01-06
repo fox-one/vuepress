@@ -5,10 +5,11 @@
   "main": "index.js",
   "author": "Fox.ONE",
   "license": "ISC",
+  "peerDependencies": {
+    "@foxone/icons": "^3.0.0",
+    "@foxone/uikit": "^3.0.0"
+  },
   "dependencies": {
-    "@foxone/icons": "beta",
-    "@foxone/uikit": "beta",
-    "@mdi/js": "^6.5.95",
     "markdown-it-checkbox": "^1.1.0",
     "node-sass": "^4.14.1",
     "raw-loader": "4.0.1",
@@ -24,5 +25,9 @@
     "vuepress-types": "^0.9.4",
     "vuetify-loader": "1.7.2",
     "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@foxone/icons": "beta",
+    "@foxone/uikit": "beta"
   }
 }
