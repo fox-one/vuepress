@@ -1650,7 +1650,6 @@ __metadata:
   dependencies:
     "@foxone/icons": beta
     "@foxone/uikit": beta
-    "@mdi/js": ^6.5.95
     markdown-it-checkbox: ^1.1.0
     node-sass: ^4.14.1
     raw-loader: 4.0.1
@@ -1666,6 +1665,9 @@ __metadata:
     vuepress-types: ^0.9.4
     vuetify-loader: 1.7.2
     vuex: ^3.6.2
+  peerDependencies:
+    "@foxone/icons": ^3.0.0
+    "@foxone/uikit": ^3.0.0
   languageName: unknown
   linkType: soft
 
@@ -1906,13 +1908,6 @@ __metadata:
     "@types/yargs": ^15.0.0
     chalk: ^4.0.0
   checksum: 5c511d7807f414b298299ae4a053abf265f39984942e0eefdfb17a7986a36f1047e0fd9a6f785bdddbf7343a5737595dfabe148719a80e118dd77486502009cc
-  languageName: node
-  linkType: hard
-
-"@mdi/js@npm:^6.5.95":
-  version: 6.5.95
-  resolution: "@mdi/js@npm:6.5.95"
-  checksum: 16846f8ec49b43621a94a515a714b8ee4359e00aaf7371c1d73c983e3639693120c1228e7a1d05584e8bdfb0156ebbfeedadd7936041da5757ca436f434f0664
   languageName: node
   linkType: hard
 
