@@ -3,6 +3,11 @@
   font-weight: bold;
   display: flex;
   align-items: center;
+  margin-top: 8px;
+
+  &:first-child {
+    margin-top: 0;
+  }
 
   .appbar-name {
     margin-left: 8px;
@@ -11,6 +16,10 @@
 
 .appbar-links {
   display: flex;
+}
+
+.appbar-link__item {
+  margin: 0 4px;
 }
 
 .appbar-link {
@@ -26,6 +35,11 @@
     opacity: 0.8;
     background-color: var(--v-greyscale_6-base);
   }
+
+  &.router-link-active {
+    background-color: var(--v-greyscale_6-base);
+    font-weight: 600;
+  }
 }
 
 .appbar-menu__items {
@@ -38,7 +52,7 @@
   .appbar-link {
     display: block;
     font-size: 13px;
-    padding: 16px;
+    padding: 8px 16px;
   }
 }
 

@@ -28,6 +28,8 @@ import SiteTitle from "@theme/components/SiteTitle.vue";
 class AppBar extends Vue {
   @Prop() items;
 
+  @Prop() hasSideBar;
+
   get mdAndDown() {
     return this.$vuetify.breakpoint.mdAndDown;
   }
@@ -37,7 +39,7 @@ class AppBar extends Vue {
   }
 
   get showToggle() {
-    return this.mdAndDown && this.items.length > 0;
+    return this.mdAndDown && this.hasSideBar;
   }
 
   handleToggleSideBar() {

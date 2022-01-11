@@ -8,7 +8,7 @@
 
     <h2 v-if="mdAndDown" class="pa-4 text-center ma-0">{{ item.text }}</h2>
 
-    <v-list class="pa-4 appbar-menu__items appbar-menu__list">
+    <v-list class="pa-2 appbar-menu__items appbar-menu__list">
       <div v-for="(sub, index) in item.items" :key="sub.link || index">
         <template v-if="sub.type === 'links'">
           <div class="appbar-menu__item-title">{{ sub.text }}</div>

@@ -74,7 +74,7 @@ function getGuideSidebar(groupA, groupB) {
   return [
     {
       title: groupA,
-      collapsable: false,
+      collapsable: true,
       children: [
         "",
         "getting-started",
@@ -89,7 +89,7 @@ function getGuideSidebar(groupA, groupB) {
     },
     {
       title: groupB,
-      collapsable: false,
+      collapsable: true,
       children: [
         "frontmatter",
         "permalinks",

@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <ClientOnly>
-      <app-bar :items="sideBarItems" />
+      <app-bar :has-side-bar="showSideBar" :items="sideBarItems" />
     </ClientOnly>
 
     <v-main>
@@ -40,10 +40,17 @@ class Layout extends Vue {
   get showSideBar() {
     const isHome = this.$page.frontmatter.home;
 
+    const { locales } = this.$site;
+
+    const hasUserNavs =
+      this.$themeLocaleConfig.nav || this.$site.themeConfig.nav || [];
+    const hasLocales = locales && Object.keys(locales).length > 1;
+    const hasAppBarLinks = hasUserNavs && hasLocales;
+
     return (
       !isHome &&
       this.$page.frontmatter.sidebar !== false &&
-      this.sideBarItems.length
+      (this.sideBarItems.length || hasAppBarLinks)
     );
   }
 

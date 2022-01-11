@@ -1,17 +1,31 @@
 <template>
   <section :class="classes">
-    <router-link
-      v-if="item.path"
-      :to="item.path"
+    <v-layout
       class="f-docs-sidebar__heading"
-      @click.native="$emit('toggle')"
+      :class="{ 'f-docs-sidebar__heading--open': open }"
     >
-      <span>{{ item.title }}</span>
-    </router-link>
+      <v-flex>
+        <router-link
+          v-if="item.path"
+          :to="item.path"
+          @click.native="$emit('toggle')"
+        >
+          <span>{{ item.title }}</span>
+        </router-link>
 
-    <p v-else class="f-docs-sidebar__heading" @click="$emit('toggle')">
-      <span>{{ item.title }}</span>
-    </p>
+        <div v-else @click="$emit('toggle')">
+          <span>{{ item.title }}</span>
+        </div>
+      </v-flex>
+
+      <v-icon
+        v-if="collapsable"
+        size="16"
+        class="f-docs-sidebar__heading-arrow"
+      >
+        $FIconChevronDown4P
+      </v-icon>
+    </v-layout>
 
     <side-bar-links
       v-if="open || !collapsable"
