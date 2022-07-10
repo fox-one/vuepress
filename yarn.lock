@@ -1639,12 +1639,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@foxone/vuepress-theme-docs-demo@workspace:packages/demo"
   dependencies:
-    "@foxone/vuepress-theme-docs": 0.0.2-8
+    "@foxone/vuepress-theme-docs": 0.0.2-9
     vuepress: ^1.9.5
   languageName: unknown
   linkType: soft
 
-"@foxone/vuepress-theme-docs@0.0.2-8, @foxone/vuepress-theme-docs@workspace:packages/theme-docs":
+"@foxone/vuepress-theme-docs@0.0.2-9, @foxone/vuepress-theme-docs@workspace:packages/theme-docs":
   version: 0.0.0-use.local
   resolution: "@foxone/vuepress-theme-docs@workspace:packages/theme-docs"
   dependencies:
