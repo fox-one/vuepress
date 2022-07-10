@@ -1,6 +1,5 @@
 import Vuex from "vuex";
 import Vuetify from "vuetify/lib";
-import UIKit from "@foxone/uikit";
 import * as icons from "@foxone/icons";
 import { mergeDeep } from "vuetify/lib/util/helpers";
 import locales from "./locales.json";
@@ -12,12 +11,13 @@ import "@theme/styles/index.scss";
 
 export default ({
   Vue,
+  isServer,
   options, // options for root Vue instance: new Vue(options)
   // router,
   siteData
 }) => {
   const vuetifyOptions = siteData.themeConfig.vuetifyOptions || {};
-  const preset = mergeDeep(UIKit.preset, {
+  let customConfig = {
     icons: {
       values: {
         ...Object.keys(icons).reduce((m, k) => {
@@ -42,19 +42,29 @@ export default ({
         }
       }
     }
-  });
-  const vuetify = new Vuetify(mergeDeep(preset, vuetifyOptions));
+  };
 
-  options.vuetify = vuetify;
+  if (!isServer) {
+    if (!options.vuetify) {
+      const vuetify = new Vuetify(mergeDeep(customConfig, vuetifyOptions));
 
-  Vue.use(Vuetify);
+      options.vuetify = vuetify;
+    }
 
-  if (typeof window !== undefined) {
+    const UIKit = require("@foxone/uikit");
+
+    customConfig = mergeDeep(UIKit.preset, customConfig);
+
     Vue.use(UIKit);
-    Vue.use(UIKit.Toast, vuetify, { top: false, centered: true });
-    Vue.use(UIKit.Dialog, vuetify, { flat: true });
+    Vue.use(UIKit.Toast, () => options.vuetify, { top: false, centered: true });
+    Vue.use(UIKit.Dialog, () => options.vuetify, { flat: true });
+  } else {
+    const vuetify = new Vuetify(mergeDeep(customConfig, vuetifyOptions));
+
+    options.vuetify = vuetify;
   }
 
+  Vue.use(Vuetify);
   Vue.use(Vuex);
   Vue.mixin({ store });
 

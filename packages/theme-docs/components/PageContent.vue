@@ -14,15 +14,27 @@
 import { Component, Vue } from "vue-property-decorator";
 import PageEdit from "@theme/components/PageEdit.vue";
 import PageNav from "@theme/components/PageNav.vue";
+import { getLocale } from "@foxone/utils/helper";
 
 @Component({
   inheritAttrs: false,
   components: {
     PageEdit,
     PageNav
+  },
+  beforeRouteEnter(_to, _from, next) {
+    next((vm: any) => {
+      vm.setLang();
+    });
   }
 })
-class PageContent extends Vue {}
+class PageContent extends Vue {
+  setLang() {
+    const locale = getLocale();
+
+    this.$vuetify.lang.current = locale;
+  }
+}
 export default PageContent;
 </script>
 
